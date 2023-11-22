@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+
+// import Counter from "./component/Counter" ;
+// import SayHi from "./component/SayHi";
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [count, setCount] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    {/* <Counter label={'je suis un conteur'} ></Counter>
+
+    <SayHi name={'Michael'} job={'Developpeur'} statut={'Alive'} ></SayHi>
+    <SayHi name={'Adam'} job={'Fils de Dieu'} statut={'unknown'} ></SayHi> */}
+
+
+      <div className="bg-red-400">
+      <button
+          onClick={() => setCount(count + 1)}>
+          +
+        </button>
+        <p>{count}</p>
+        <button
+          onClick={() => setCount(count - 1)}>
+          -
+            </button>
+      </div>
     </div>
   );
 }
